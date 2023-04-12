@@ -6,8 +6,10 @@ const gallery = document.querySelector('.gallery');
 function renderTrend(data) {
     const markup = createListMarkup(data);
 
+
     gallery.insertAdjacentHTML('beforeend', markup);
 }
+
 
 export function createListMarkup(data) {
     if (data) {

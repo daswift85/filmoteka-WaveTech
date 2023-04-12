@@ -1,84 +1,14 @@
 <header class="header">
   <div class="header__container">
     <nav class="nav">
-      <a class="nav__link" href="./index.html">
-        <svg
-          width="59"
-          height="59"
-          viewBox="0 0 59 59"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M48.7241 4.9165H10.2758C7.316 4.9165 4.91663 7.31588 4.91663 10.2757V48.724C4.91663 51.6838 7.316 54.0831 10.2758 54.0831H48.7241C51.6839 54.0831 54.0833 51.6838 54.0833 48.724V10.2757C54.0833 7.31588 51.6839 4.9165 48.7241 4.9165Z"
-            stroke="white"
-            stroke-width="4"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          />
-          <path
-            d="M17.2084 4.9165V54.0831"
-            stroke="white"
-            stroke-width="4"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          />
-          <path
-            d="M41.7916 4.9165V54.0831"
-            stroke="white"
-            stroke-width="4"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          />
-          <path
-            d="M4.91663 29.5H54.0833"
-            stroke="white"
-            stroke-width="4"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          />
-          <path
-            d="M4.91663 17.2085H17.2083"
-            stroke="white"
-            stroke-width="4"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          />
-          <path
-            d="M4.91663 41.7915H17.2083"
-            stroke="white"
-            stroke-width="4"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          />
-          <path
-            d="M41.7916 41.7915H54.0833"
-            stroke="white"
-            stroke-width="4"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          />
-          <path
-            d="M41.7916 17.2085H54.0833"
-            stroke="white"
-            stroke-width="4"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          />
-        </svg>
-        <span class="nav__title">Filmoteka</span>
-      </a>
-
       <ul class="nav__list">
         <li class="nav__item">
-          <a class="nav__link current-link" href="./index.html"
-            ><span class="nav__title" id="home">Home</span></a
-          >
+          <a class="nav__link current-link link" href="./index.html"
+            >Home</a>        
         </li>
         <li class="nav__item">
-          <a class="nav__link" href="./partials/mylibrary.html"
-            ><span class="nav__title">My library</span></a
-          >
+          <a class="nav__link link" href="./partials/mylibrary.html"
+            >My library</a>
         </li>
       </ul>
     </nav>
@@ -90,28 +20,18 @@
         placeholder="Movie search"
       />
       <button class="search__submit-button" type="submit">
-        <svg
-          width="16"
-          height="16"
-          viewBox="0 0 16 16"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M7.33333 12.6667C10.2789 12.6667 12.6667 10.2789 12.6667 7.33333C12.6667 4.38781 10.2789 2 7.33333 2C4.38781 2 2 4.38781 2 7.33333C2 10.2789 4.38781 12.6667 7.33333 12.6667Z"
-            stroke="black"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          />
-          <path
-            d="M14 14.0001L11.1 11.1001"
-            stroke="black"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          />
+        <svg class="search__icon" >
+          <use href="./images/svg/icons.svg#search"></use>
         </svg>
       </button>
     </form>
+
+    <a class="logo__link link" href="./index.html">
+      <svg class="logo__icon">
+        <use href="./images/svg/icons.svg#film"></use>
+      </svg>
+      <span class="logo__title">Filmoteka</span>
+    </a>
 
     <!-- <div class="toggle__switch">
       <label>

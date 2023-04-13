@@ -24,6 +24,7 @@
     "modal-js": "^3.0.1",
     "modern-normalize": "^1.1.0",
     "notiflix": "^3.2.6",
+    "tui-pagination": "^3.4.1",
     "vanilla-back-to-top": "^7.2.1"
   },
   "devDependencies": {

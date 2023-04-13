@@ -2,7 +2,8 @@
 <div class="container-modal">
   <div class="info">
     <div class="info__left-part">
-      <img
+      <img src="./banner.jpg" alt="banner" width="375" height="478" />
+      <!-- <img
         class="info__picture"
         src="#"
         alt="banner"
@@ -15,17 +16,28 @@
           ./images/#-320@2x.jpg  980w
         "
         sizes="(min-width: 1280px) 490px, (min-width: 768px) 330px, (min-width: 320px) 279px"
-      />
+      /> -->
     </div>
     <div class="info__right-part">
+      <h1 class="visually-hidden">A fistful of lead</h1>
       <div class="info-movie">
         <ul class="info-movie__details">
-          <li class="info-movie__list"><a>Vote / Votes</a><a>7.3 / 1260</a></li>
-          <li class="info-movie__list"><a>Popularity</a><a>100.2</a></li>
           <li class="info-movie__list">
-            <a>Original Title</a><a>A FISTFUL OF LEAD</a>
+            <a>Vote / Votes</a>
+            <!-- <a>7.3 / 1260</a> -->
           </li>
-          <li class="info-movie__list"><a>Genre</a><a>Western</a></li>
+          <li class="info-movie__list">
+            <a>Popularity</a>
+            <!-- <a>100.2</a> -->
+          </li>
+          <li class="info-movie__list">
+            <a>Original Title</a>
+            <!-- <a>A FISTFUL OF LEAD</a> -->
+          </li>
+          <li class="info-movie__list">
+            <a>Genre</a>
+            <!-- <a>Western</a> -->
+          </li>
         </ul>
       </div>
       <div class="info-about">
@@ -41,13 +53,15 @@
           double crossed – but by who and how?
         </p>
       </div>
-      <button class="info-about__btn">add to Watched</button>
-      <button data-modal="#" class="js-open-modal info-about__btn-close">
+      <div class="info-about__btn">
+        <button class="info-about__btn-watch">add to Watched</button>
+      <!-- <button data-modal="#" class="js-open-modal info-about__btn-close">
         <svg class="info-about__icon-btn" height="12" width="12">
           <use href="../images/svg/icons.svg#close"></use>
         </svg>
-      </button>
-      <button class="info-about__btn">add to queue</button>
+      </button> -->
+      <button class="info-about__btn-queue">add to queue</button>
+      </div>
     </div>
   </div>
 </div>

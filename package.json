@@ -21,6 +21,7 @@
     "axios": "^1.3.5",
     "dark-mode-toggle": "^0.14.4",
     "intersection-observer": "^0.12.2",
+    "locomotive-scroll": "^4.1.4",
     "modal-js": "^3.0.1",
     "modern-normalize": "^1.1.0",
     "notiflix": "^3.2.6",

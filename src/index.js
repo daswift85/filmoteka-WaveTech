@@ -1,3 +1,5 @@
-import './js/api-vars';
-import './js/fetch-films';
-import './js/render-trend';
+import './js/api/genresList';
+import './js/api/getMovieGenres';
+import './js/api/getMovieReleaseYear';
+import './js/api/movieAPI';
+import './js/api/varsAPI';

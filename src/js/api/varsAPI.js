@@ -1,6 +1,4 @@
-const settings = {
-  API_KEY: '7cb8097836a7a1f4e5c19953961668c8',
-  BASE_URL: 'https://api.themoviedb.org/3',
-  IMG_URL: 'https://image.tmdb.org/t/p/w500/',
+export const settings = {
+  API_KEY: '492f9e953404699f8c7d096022fa41fa',
+  MAIN_URL: 'https://api.themoviedb.org/3',
 };
-export default settings;

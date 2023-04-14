@@ -1,0 +1,96 @@
+footer {
+  background-color: #f7f7f7;
+}
+
+.footer-text-cont {
+  display: flex;
+  justify-content: center;
+  padding: 29px;
+}
+
+.footer-text-p2 {
+  display: flex;
+}
+
+.icon-heart {
+  fill: #b92f2c;
+  margin: auto 10px;
+}
+
+.team-modal-link {
+  margin-left: 5px;
+  text-decoration: underline;
+}
+
+.team-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.team-modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 806px;
+  background-color: #f0f0f0;
+  border-radius: 5px;
+  padding: 20px;
+}
+
+.modal-close-btn {
+  width: 40px;
+  height: 40px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 5px;
+}
+
+.modal-title {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+  color: #545454;
+}
+
+.footer-team-members {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  color: #545454;
+}
+
+.member {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+
+.team-image {
+  border-radius: 50%;
+}
+
+.member-info {
+  margin-top: 5px;
+}
+
+.teammate {
+  margin-bottom: 5px;
+  font-weight: 700;
+}
+
+.team-role {
+  font-style: italic;
+}

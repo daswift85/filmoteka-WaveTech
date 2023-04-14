@@ -14,4 +14,3 @@ export function formatGenres(array) {
     return genreResult.join(', ');
   }
 }
-export {formatGenres};

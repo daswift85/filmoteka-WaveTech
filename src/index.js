@@ -1,6 +1,5 @@
 import './js/genresList';
 import './js/genresListFormat';
-import './js/voteAverage';
 import './js/movieReleaseYearFormat';
 import './js/api/movieAPI';
 import './js/api/varsAPI';

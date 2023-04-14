@@ -18,14 +18,12 @@
     grid-column-gap: 32px;
     padding-top: 30px;
     padding-bottom: 30px;
-    justify-content: center;
   }
   @media screen and (min-width: 1280px) {
     max-width: 1280px;
     grid-column-gap: 16px;
     padding-top: 30px;
     padding-bottom: 30px;
-    justify-content: center;
   }
 }
 
@@ -92,8 +90,7 @@
   margin-top: 0;
   margin-bottom: 0;
 }
-.gallery__date,
-.gallery__rank{
+.gallery__date{
   position: relative;
   display: inline-block;
   font-family: 'Roboto';

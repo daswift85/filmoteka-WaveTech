@@ -7,7 +7,6 @@ export function createGalleryMarkup(movies) {
     .map(movie => {
       const genres = genresListFormat(movie.genre_ids);
       const movieYear = movieReleaseYearFormat(movie);
-      const voteAverageRank = voteAverage(movie.vote_average)
       const poster = movie.poster_path
         ? `https://image.tmdb.org/t/p/w500/${movie.poster_path}`
         : noPoster;
@@ -25,7 +24,6 @@ export function createGalleryMarkup(movies) {
         <div class="gallery__info">
           <p class="gallery__genre-text">${genres}</p>
           <p class="gallery__date">| ${movieYear}</p>
-          <p class="gallery__rank">| ${voteAverageRank}</p>
         </div>
       </div>
     </li>`;

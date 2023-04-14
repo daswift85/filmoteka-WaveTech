@@ -1,5 +1,5 @@
 import { genresListFormat } from '../genresListFormat';
-import noPoster from '../../images/noPoster.jpg';
+import noPoster from '../../images/noPoster.png';
 import { movieReleaseYearFormat } from '../movieReleaseYearFormat';
 
 export function createGalleryMarkup(movies) {

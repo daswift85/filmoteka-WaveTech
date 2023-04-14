@@ -1,8 +1,8 @@
+@import 'base';
 @import 'vars';
+@import 'reset';
+@import 'container';
 
-.link {
-  text-decoration: none;
-}
 
 // =================HEADER=================
 
@@ -12,7 +12,7 @@
   background-size: cover;
   height: 460px;
   border-radius: 10px;
-  margin: 20px 20px 0 20px;
+  // margin: 20px 20px 0 20px;
 }
 
 // .header__container {
@@ -30,7 +30,7 @@
 .nav__list {
   padding: 0;
   display: flex;
-  margin: 0 0 8px 14px;
+  // margin: 0 0 8px 14px;
 }
 
 .nav__item {
@@ -67,8 +67,9 @@
 // =================SEARCH FORM=================
 .search__form {
   position: relative;
-  margin-left: 14px;
-  margin-right: 14px;
+  // margin-left: 14px;
+  // margin-right: 14px;
+  margin-top: 8px;
 }
 
 .search__input {
@@ -97,8 +98,8 @@
 }
 
 .search__icon {
-  width: 20px;
-  height: 20px;
+  width: 14px;
+  height: 14px;
 }
 
 // =================LOGO=================
@@ -130,7 +131,8 @@
   .header {
     background-image: url('../images/header/abstract-background-with-red-lines-tablet3x.jpg');
     height: 222px;
-    margin: 32px 32px 0 32px;
+
+    // margin: 32px 32px 0 32px;
   }
 
   .nav__link {
@@ -141,13 +143,12 @@
     position: absolute;
     top: 14px;
     left: 16px;
-    margin-left: 0px;
-    margin-right: 0px;
+    margin-top: 0;
   }
 
   .search__input {
     width: 165px;
-    padding: 11px 16px;
+    padding: 10px 16px;
     font-size: 14px;
   }
 
@@ -155,17 +156,23 @@
     top: 0px;
     right: 5px;
     width: 40px;
-    height: 40px;
+    height: 38px;
     border-radius: 100px;
   }
+
+  .search__icon {
+    width: 16px;
+    height: 16px;
+  }
+  
 
   .nav__list {
     margin: 0 0 8px 185px;
   }
 
   .logo__link {
-    left: 16px;
-    top: 105px;
+    left: -510px;
+    top: 150px;
   }
 
   .logo__icon {
@@ -182,7 +189,7 @@
   .header {
     background-image: url('../images/header/abstract-background-with-red-lines-desktop3x.jpg');
     height: 316px;
-    margin: 32px 32px 0 32px;
+    // margin: 32px 32px 0 32px;
   }
 
   .nav__list {
@@ -213,9 +220,8 @@
   }
 
   .logo__link {
-    left: 32px;
-    top: 160px;
-    gap: 16px;
+    left: -865px;
+    top: 230px;
   }
 
   .logo__title {

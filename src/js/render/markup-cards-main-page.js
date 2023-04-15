@@ -30,3 +30,5 @@ export function createGalleryMarkup(movies) {
     })
     .join('');
 }
+
+

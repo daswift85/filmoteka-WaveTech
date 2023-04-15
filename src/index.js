@@ -8,4 +8,4 @@ import './js/render/markup-cards-main-page';
 import './js/refs';
 import './js/components/spinner';
 import './js/team-modal.js';
-
+import './js/darktheme.js';

@@ -9,3 +9,4 @@ import './js/refs';
 import './js/components/spinner';
 import './js/team-modal.js';
 import './js/darktheme.js';
+import './js/library';

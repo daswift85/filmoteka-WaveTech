@@ -12,7 +12,7 @@
   background-size: cover;
   height: 460px;
   border-radius: 10px;
-  // margin: 20px 20px 0 20px;
+  margin: 20px 20px 0 20px;
 }
 
 // .header__container {
@@ -120,7 +120,7 @@
 
 .logo__link {
   position: relative;
-  left: 45px;
+  left: -10px;
   top: 320px;
   align-items: center;
   display: inline-flex;
@@ -132,7 +132,7 @@
     background-image: url('../images/header/abstract-background-with-red-lines-tablet3x.jpg');
     height: 222px;
 
-    // margin: 32px 32px 0 32px;
+    margin: 32px 32px 0 32px;
   }
 
   .nav__link {
@@ -171,7 +171,7 @@
   }
 
   .logo__link {
-    left: -510px;
+    left: -450px;
     top: 150px;
   }
 
@@ -220,7 +220,7 @@
   }
 
   .logo__link {
-    left: -865px;
+    left: -800px;
     top: 230px;
   }
 

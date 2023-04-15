@@ -11,7 +11,7 @@
   background-size: cover;
   height: 460px;
   border-radius: 10px;
-  //   margin: 20px 20px 0 20px;
+    margin: 20px 20px 0 20px;
 }
 
 .header__container {
@@ -73,6 +73,25 @@
   color: var(--white-color);
 }
 
+
+// =============Toggle Theme ==========
+
+.toggle__input {
+  display: inline-flex;
+  align-items: center; 
+  justify-content: center; 
+  border: none; 
+  background-color: transparent; 
+  cursor: pointer; 
+  padding: 0; 
+}
+
+.toggle__icon {
+  width: 40px; /* задаем размер иконки */
+  height: 40px;
+}
+
+
 // =================LOGO=================
 
 .library_logo-link {
@@ -94,6 +113,7 @@
   .library__header {
     background-image: url('../images/header/abstract-background-with-red-lines-tablet3x.jpg');
     height: 222px;
+        margin: 32px 32px 0 32px;
   }
   .header__container {
     display: flex;
@@ -132,6 +152,7 @@
   .library__header {
     background-image: url('../images/header/abstract-background-with-red-lines-desktop3x.jpg');
     height: 316px;
+
   }
 
   .library_logo-link {

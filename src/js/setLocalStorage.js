@@ -1,7 +1,7 @@
 // функция будет использована для сохранения id фильма в LocalStorage
 
 export function addToLocalStorage(key, id) {
-  const existingMv = JSON.parse(localStorage.getItem(key));
+  let existingMv = JSON.parse(localStorage.getItem(key));
   if (existingMv === null) {
     existingMv = [];
   }

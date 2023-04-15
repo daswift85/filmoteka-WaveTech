@@ -1,0 +1,18 @@
+@import './vars' body {
+  transition: all 0.3s ease;
+}
+body.dark-mode {
+  background-color: #212121;
+  color: var(--white-color);
+}
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #212121;
+    color: var(--white-color);
+    transition: all 0.3s ease;
+  }
+  body.light-mode {
+    background-color: var(--background-color);
+    color: var(--black-color);
+  }
+}

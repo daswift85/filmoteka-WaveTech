@@ -1,20 +1,44 @@
+.modal-open {
+  overflow: hidden;
+}
+
 footer {
   background-color: #f7f7f7;
 }
 
 .footer-text-cont {
+  font-size: 14px;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   padding: 29px;
+  white-space: nowrap;
+
+  @media screen and (min-width: 768px) {
+    font-size: 16px;
+    flex-direction: row;
+  }
+}
+
+.footer-text-p1 {
+  text-align: center;
+
+  @media screen and (max-width: 320px) {
+    margin-bottom: 12px;
+  }
 }
 
 .footer-text-p2 {
   display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
 .icon-heart {
   fill: #b92f2c;
-  margin: auto 10px;
+  margin-left: 5px;
+  margin-right: 5px;
 }
 
 .team-modal-link {
@@ -29,6 +53,7 @@ footer {
   width: 100vw;
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.5);
+  overflow: auto;
 }
 
 .team-modal {
@@ -36,10 +61,18 @@ footer {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 806px;
+  width: 270px;
   background-color: #f0f0f0;
   border-radius: 5px;
   padding: 20px;
+
+  @media screen and (min-width: 768px) {
+    width: 708px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    width: 806px;
+  }
 }
 
 .modal-close-btn {
@@ -65,9 +98,19 @@ footer {
 }
 
 .footer-team-members {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
   color: #545454;
+  display: grid;
+  grid-template-columns: 1fr;
+
+  @media screen and (min-width: 768px) {
+    isplay: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media screen and (min-width: 1280px) {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
 }
 
 .member {
@@ -76,6 +119,11 @@ footer {
   justify-content: center;
   align-items: center;
   padding: 10px;
+  transition: transform 0.2s ease-in-out;
+
+  &:hover {
+    transform: scale(1.1);
+  }
 }
 
 .team-image {
@@ -84,6 +132,10 @@ footer {
 
 .member-info {
   margin-top: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .teammate {

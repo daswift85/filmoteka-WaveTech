@@ -11,7 +11,7 @@
   background-size: cover;
   height: 460px;
   border-radius: 10px;
-    margin: 20px 20px 0 20px;
+  margin: 20px 20px 0 20px;
 }
 
 .header__container {
@@ -73,47 +73,28 @@
   color: var(--white-color);
 }
 
-
-// =============Toggle Theme ==========
-
-.toggle__input {
-  display: inline-flex;
-  align-items: center; 
-  justify-content: center; 
-  border: none; 
-  background-color: transparent; 
-  cursor: pointer; 
-  padding: 0; 
-}
-
-.toggle__icon {
-  width: 40px; /* задаем размер иконки */
-  height: 40px;
-}
-
-
 // =================LOGO=================
 
 .library_logo-link {
   display: inline-flex;
   align-items: center;
   position: absolute;
-  top: 85%;
+  top: 80%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
 
-.library__logo-icon{
-    width: 32px;
-    height: 32px;
-    margin-right: 8px;
+.library__logo-icon {
+  width: 32px;
+  height: 32px;
+  margin-right: 8px;
 }
 
 @media screen and (min-width: 768px) {
   .library__header {
     background-image: url('../images/header/abstract-background-with-red-lines-tablet3x.jpg');
     height: 222px;
-        margin: 32px 32px 0 32px;
+    margin: 32px 32px 0 32px;
   }
   .header__container {
     display: flex;
@@ -132,7 +113,6 @@
   .library__logo-icon {
     width: 40px;
     height: 40px;
-
   }
 
   .logo__title {
@@ -143,16 +123,15 @@
     margin-top: 14px;
   }
 
-//   .library__btn-list {
-//     margin-left: 285px;
-//   }
+  //   .library__btn-list {
+  //     margin-left: 285px;
+  //   }
 }
 
 @media screen and (min-width: 1280px) {
   .library__header {
     background-image: url('../images/header/abstract-background-with-red-lines-desktop3x.jpg');
     height: 316px;
-
   }
 
   .library_logo-link {

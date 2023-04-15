@@ -1,4 +1,4 @@
-import noPoster from '../images/noPoster.png';
+const noPoster = '../images/noPoster.png';
 const apiKey = '492f9e953404699f8c7d096022fa41fa'; // Replace with your TMDB API key
 const apiUrl = 'https://api.themoviedb.org/3/search/movie';
 const galleryContainer = document.querySelector('.js-gallery'); // Replace with the ID of your gallery container element

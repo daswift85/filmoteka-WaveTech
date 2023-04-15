@@ -1,4 +1,6 @@
-@import './vars' body {
+@import './vars';
+
+body {
   transition: all 0.3s ease;
 }
 body.dark-mode {

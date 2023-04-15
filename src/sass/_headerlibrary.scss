@@ -1,0 +1,155 @@
+@import 'base';
+@import 'vars';
+@import 'reset';
+@import 'container';
+
+// =================HEADER LIBRARY=================
+
+.library__header {
+  background-image: url('../images/header/abstract-background-with-red-lines-mobile3x.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 460px;
+  border-radius: 10px;
+  //   margin: 20px 20px 0 20px;
+}
+
+.header__container {
+  position: relative;
+}
+
+// =================NAVIGATION=================
+
+.library__nav-list {
+  display: flex;
+  //   margin-left: 14px;
+}
+.library__nav-item {
+  margin-top: 14px;
+}
+
+.library__nav-item:not(:last-child) {
+  margin-right: 4px;
+}
+
+.library__btn-list {
+  display: flex;
+  // margin-left: 14px;
+  align-items: center;
+  justify-content: center;
+}
+
+.library__btn {
+  margin-top: 354px;
+}
+
+.library__item:not(:last-child) {
+  margin-right: 4px;
+}
+
+.library__nav-link {
+  display: inline-block;
+  padding: 10px 26px;
+  background-color: var(--white-color);
+  border-radius: 100px;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  color: var(--black-color);
+}
+
+.current-link {
+  background-color: var(--black-color);
+  color: var(--white-color);
+}
+
+.library__link {
+  color: var(--accent-color);
+}
+
+.library__current-link {
+  background-color: var(--accent-color);
+  color: var(--white-color);
+}
+
+// =================LOGO=================
+
+.library_logo-link {
+  display: inline-flex;
+  align-items: center;
+  position: absolute;
+  top: 85%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.library__logo-icon{
+    width: 32px;
+    height: 32px;
+    margin-right: 8px;
+}
+
+@media screen and (min-width: 768px) {
+  .library__header {
+    background-image: url('../images/header/abstract-background-with-red-lines-tablet3x.jpg');
+    height: 222px;
+  }
+  .header__container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .library__nav-link {
+    padding: 12px 24px;
+  }
+
+  .library_logo-link {
+    top: 180px;
+    left: 128px;
+  }
+
+  .library__logo-icon {
+    width: 40px;
+    height: 40px;
+
+  }
+
+  .logo__title {
+    font-size: 40px;
+  }
+
+  .library__btn {
+    margin-top: 14px;
+  }
+
+//   .library__btn-list {
+//     margin-left: 285px;
+//   }
+}
+
+@media screen and (min-width: 1280px) {
+  .library__header {
+    background-image: url('../images/header/abstract-background-with-red-lines-desktop3x.jpg');
+    height: 316px;
+  }
+
+  .library_logo-link {
+    top: 250px;
+    left: 215px;
+  }
+
+  .logo__title {
+    font-size: 64px;
+  }
+
+  .library__logo-icon {
+    width: 60px;
+    height: 60px;
+    margin-right: 16px;
+  }
+
+  .library__nav-link {
+    padding: 14px 32px;
+  }
+}

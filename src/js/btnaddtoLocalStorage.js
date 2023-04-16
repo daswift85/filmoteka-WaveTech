@@ -1,43 +1,35 @@
 import {addToLocalStorage} from './setLocalStorage';
 import {removeFromLocalStorage } from './removeLocalStorage';
 import { btnSwitcher } from './btnSwitch';
-//добавить import './js/btnaddtoLocalStorage' в index.js после того, как все заработает
-export const btnRefs = {
-  watchBtnEl: document.querySelector('.info-about__btn-watch'),
-  queueBtnEl: document.querySelector('.info-about__btn-queue'),
-  movies: document.querySelector('.js-gallery'), //сменить после на доступ к модалке 
-};
-  
-let idMovie='';
 
-// функция для получения id фильма из галерии - сменить после на id с модалки
-function getMovieId(e) {
-  if (e.target.nodeName === 'IMG') {
-    idMovie = e.target.parentNode.attributes['data-movie'].nodeValue;
-    console.log(idMovie, typeof idMovie);
-    // addToLocalStorage('watchedId', idMovie);
-  return idMovie;
-  }
-};
+export const modal=document.querySelector('.modal');
 
-btnRefs.movies.addEventListener('click', getMovieId); //тест работы localStorage при нажатии физьма из галереи популярных
+let idMovie = '';
 
-btnRefs.watchBtnEl.addEventListener('click', ev => {
-    if (btnRefs.watchBtnEl.textContent.includes('remove')) {
-        removeFromLocalStorage('watchedId', idMovie); // !!! взять id фильма с модалки
-        btnSwitcher(ev, 'watched'); // чекнуть работу кнопок, после того как id будет браться с модалки
+modal.addEventListener('click', ev => {
+  getMovieId(ev);
+  if (ev.target.dataset.btn === "addToWatched") {
+    if (ev.target.textContent.includes('remove')) {
+      removeFromLocalStorage('watchedId', idMovie);
+      btnSwitcher(ev, 'watched');
     } else {
-      addToLocalStorage('watchedId', idMovie); // !!! взять id фильма с модалки
-      btnSwitcher(ev, 'watched'); // чекнуть работу кнопок, после того как id будет браться с модалки
+      addToLocalStorage('watchedId', idMovie);
+      btnSwitcher(ev, 'watched');
     };
-});
-
-btnRefs.queueBtnEl.addEventListener('click', ev => {
-  if (btnRefs.queueBtnEl.textContent.includes('remove')) {
-    removeFromLocalStorage('queueId', idMovie); // !!! взять id фильма с модалки
-    btnSwitcher(ev, 'queue'); // чекнуть работу кнопок, после того как id будет браться с модалки
+  } else if (ev.target.dataset.btn === 'addToQueue') {
+    if (ev.target.textContent.includes('remove')) {
+      removeFromLocalStorage('queueId', idMovie);
+      btnSwitcher(ev, 'queue');
   } else {
-    addToLocalStorage('queueId', idMovie); // !!! взять id фильма с модалки
-    btnSwitcher(ev, 'queue'); // чекнуть работу кнопок, после того как id будет браться с модалки
+      addToLocalStorage('queueId', idMovie);
+      btnSwitcher(ev, 'queue');
+    };
+  } else {
+    return;
   }
 });
+
+function getMovieId(e) {
+    idMovie = e.target.parentElement.parentElement.parentElement.dataset.id;
+  return idMovie;
+};

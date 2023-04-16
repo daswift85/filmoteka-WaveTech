@@ -8,12 +8,14 @@ const refs = {
   searchSubmitButton: document.querySelector('.search__submit-button'),
   // Кнопки фильтра
   weeklyTrendBtn: document.querySelector('button[data-set="trending"]'),
+  topRatedBtn: document.querySelector('button[data-set="top_rated"]'),
+
   loaderModal: document.querySelector('.modal__loader'),
   libraty: document.querySelector('#gallery-lib'),
   closeModalBtn: document.querySelector('.modal__btn-close'),
   divBackdrop: document.querySelector('.js-backdrop'),
   modalRef: document.querySelector('.modal__wrap'),
-  teamRef: document.querySelector('.team__wrap')
+  teamRef: document.querySelector('.team__wrap'),
 };
 
 export default refs;

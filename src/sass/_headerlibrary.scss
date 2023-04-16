@@ -6,12 +6,20 @@
 // =================HEADER LIBRARY=================
 
 .library__header {
-  background-image: url('../images/header/abstract-background-with-red-lines-mobile3x.jpg');
+  background-image: url('../images/header/abstract-background-with-yellow-lines-mobile2x.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   height: 460px;
   border-radius: 10px;
   margin: 20px 20px 0 20px;
+}
+
+@media (min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+  .library__header {
+    background-image: url('../images/header/abstract-background-with-yellow-lines-mobile3x.jpg');
+  }
 }
 
 .header__container {
@@ -59,6 +67,12 @@
   color: var(--black-color);
 }
 
+.library__nav-link:hover,
+.library__nav-link:focus {
+  color: var(--accent-color);
+  // transform: scale(1.2);
+}
+
 .current-link {
   background-color: var(--black-color);
   color: var(--white-color);
@@ -66,6 +80,10 @@
 
 .library__link {
   color: var(--accent-color);
+}
+
+.library__link:hover {
+  color: var(--black-color);
 }
 
 .library__current-link {
@@ -92,10 +110,19 @@
 
 @media screen and (min-width: 768px) {
   .library__header {
-    background-image: url('../images/header/abstract-background-with-red-lines-tablet3x.jpg');
+    background-image: url('../images/header/abstract-background-with-yellow-lines-mobile2x.jpg');
     height: 222px;
     margin: 32px 32px 0 32px;
   }
+
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    .library__header {
+      background-image: url('../images/header/abstract-background-with-yellow-lines-mobile3x.jpg');
+    }
+  }
+
   .header__container {
     display: flex;
     justify-content: space-between;
@@ -123,16 +150,21 @@
     margin-top: 14px;
   }
 
-  //   .library__btn-list {
-  //     margin-left: 285px;
-  //   }
 }
 
 @media screen and (min-width: 1280px) {
   .library__header {
-    background-image: url('../images/header/abstract-background-with-red-lines-desktop3x.jpg');
+    background-image: url('../images/header/abstract-background-with-yellow-lines-desktop2x.jpg');
     height: 316px;
   }
+
+  @media (min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+  .library__header {
+    background-image: url('../images/header/abstract-background-with-yellow-lines-desktop3x.jpg');
+  }
+}
 
   .library_logo-link {
     top: 250px;

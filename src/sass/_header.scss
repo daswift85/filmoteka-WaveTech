@@ -4,14 +4,21 @@
 @import 'container';
 
 // =================HEADER=================
-
 .header {
-  background-image: url('../images/header/abstract-background-with-red-lines-mobile3x.jpg');
+  background-image: url('../images/header/abstract-background-with-red-lines-mobile2x.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   height: 460px;
   border-radius: 10px;
   margin: 20px 20px 0 20px;
+}
+
+@media (min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+  .header {
+    background-image: url('../images/header/abstract-background-with-red-lines-mobile3x.jpg');
+  }
 }
 
 .header__container {
@@ -59,9 +66,7 @@
 // =============Toggle Theme ==========
 
 .toggle__input {
-  // position: relative;
-  // left: 0%;
-  // top: 0%;
+  display: flex;
   border: none;
   cursor: pointer;
   padding: 0;
@@ -76,7 +81,12 @@
 .toggle__icon {
   width: 20px; /* задаем размер иконки */
   height: 20px;
-  margin-left: 8px;
+  margin: auto;
+  align-self: center;
+}
+
+.toggle__input:hover .toggle__icon {
+  fill: var(--accent-color);
 }
 
 // =================SEARCH FORM=================
@@ -133,15 +143,6 @@
   color: var(--white-color);
 }
 
-// .logo__link {
-//   position: relative;
-//   left: -10px;
-//   top: 320px;
-//   align-items: center;
-//   display: inline-flex;
-//   gap: 8px;
-// }
-
 .logo__link {
   display: inline-flex;
   align-items: center;
@@ -156,10 +157,17 @@
 
 @media screen and (min-width: 768px) {
   .header {
-    background-image: url('../images/header/abstract-background-with-red-lines-tablet3x.jpg');
+    background-image: url('../images/header/abstract-background-with-red-lines-tablet2x.jpg');
     height: 222px;
-
     margin: 32px 32px 0 32px;
+  }
+
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    .header {
+      background-image: url('../images/header/abstract-background-with-red-lines-tablet3x.jpg');
+    }
   }
 
   .header__container {
@@ -220,16 +228,24 @@
   }
 
   .toggle__icon {
-    width: 20px; /* задаем размер иконки */
+    width: 20px; 
     height: 20px;
   }
 }
 
 @media screen and (min-width: 1280px) {
   .header {
-    background-image: url('../images/header/abstract-background-with-red-lines-desktop3x.jpg');
+    background-image: url('../images/header/abstract-background-with-red-lines-desktop2x.jpg');
     height: 316px;
     // margin: 32px 32px 0 32px;
+  }
+
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    .header {
+      background-image: url('../images/header/abstract-background-with-red-lines-desktop3x.jpg');
+    }
   }
 
   .nav__list {

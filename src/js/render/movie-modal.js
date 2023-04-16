@@ -5,6 +5,7 @@ import refs from '../refs';
 import { showHideLoader } from '../loader';
 import { getArrayOfMovies } from '../api/movieAPI';
 import { createGalleryMarkup } from './markup-cards-main-page';
+import noPoster from '../../images/noPoster.png';
 
 let keyTrailer = '';
 const KEY_WATCHED = 'watched';
@@ -135,7 +136,7 @@ function createFilmCardMarkup(data){
     }
     const poster = data.poster_path
     ? `https://image.tmdb.org/t/p/w500${data.poster_path}`
-    : noposter;
+    : noPoster;
 
   const markup = `<img
       class="modal__img"

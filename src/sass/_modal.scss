@@ -17,6 +17,8 @@ h2 {
   font-weight: 500; /* Задание начертания Medium */
 }
 
+
+
 .backdrop {
   position: fixed;
   top: 0;
@@ -25,18 +27,15 @@ h2 {
   display: flex;
   align-items: center;
   justify-content: center;
-
   width: 100%;
   height: 100%;
-
   background: rgba(0, 0, 0, 0.2);
-
   overflow-y: auto;
-
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
 }
+
 body.show-modal .backdrop {
   opacity: 1;
   visibility: visible;
@@ -46,6 +45,28 @@ body.show-modal .backdrop {
 
 body.show-modal {
   overflow-y: hidden;
+}
+
+.modal__btn {
+  margin-right: 15px;
+  width: 113px;
+  border: 1px solid var(--accent-color);
+  color: var(--accent-color);
+  display: inline-block;
+  height: 44px;
+  border-radius: 5px;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.33;
+  text-align: center;
+  text-transform: uppercase;
+  background-color: transparent;
+  transition: .3s linear;
+  cursor: pointer;
+}
+
+.modal__btn-list {
+  display: flex;
 }
 
 .modal__btn-close {
@@ -61,17 +82,20 @@ body.show-modal {
   z-index: 50;
 }
 .modal{
+  font-size: 12px;
+  line-height: 1.7;
+  border-radius: 5px;
+  display: block;
   position: absolute;
   opacity: 0;
-  visibility: hidden;
-  font-family: 'Roboto', sans-serif;
-  padding: 12px 40px;
+  visibility: hidden;  
+  padding: 48px 20px;
   margin-left: auto;
   margin-right: auto;
   background-color: #ffffff;
   text-align: left;
-  width: 806px;
-  height: 558px;
+  width: 280px;
+  height: 980px;
 
   @media screen and (max-width: 767px) {
     top: 20px;
@@ -85,7 +109,6 @@ body.show-modal {
     padding-bottom: 40px;
     padding-left: 36px;
     width: 704px;
-
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%) scale(0.8);
@@ -200,8 +223,7 @@ body.show-modal {
 
     @media screen and (min-width: 768px) {
       padding: 12px 18px;
-      // width: 125px;
-      // height: 44px;
+      
     }
 
     @media screen and (min-width: 1280px) {
@@ -228,16 +250,60 @@ body.show-modal {
   }
 }
 
+.modal__list-right {
+  font-family: Roboto,sans-serif;
+  font-size: 12px;
+  line-height: 1.3;
+  color:#000000;
+  display: inline-block;
+  min-width: 72px;
+  margin-right: 40px;
+}
+
 .modal__wrap {
+   display: block;
+
     @media screen and (min-width: 768px) {
       display: flex;
     }
   }
 
-.modal__img {
-    border-radius: 5px;
-    margin-bottom: 20px;
+.modal__list-vote {
+  background-color: var(--accent-color);
+  color: var(--main-color);
+  display: inline-block;
+  width: 36px;
+  height: 16px;
+  margin-right: 3px;
+  border-radius: 5px;
+  text-align: center;
+  font-family: Roboto,sans-serif;
+  font-size: 12px;
+  line-height: 1.3;
+}
 
+.modal__list-votes {
+  color: black;
+  background-color: black;
+  margin-left: 3px;
+  display: inline-block;
+  width: 36px;
+  height: 16px;
+  margin-right: 3px;
+  border-radius: 5px;
+  text-align: center;
+  font-family: Roboto,sans-serif;
+  font-size: 12px;
+  line-height: 1.3;
+}
+
+.modal__img {
+  width: 240px;
+    height: 356px;
+    margin-bottom: 30px;
+    display: block;
+    border-radius: 5px;
+   
     @media screen and (min-width: 768px) {
       min-width: 264px;
       max-height: 374px;
@@ -253,11 +319,11 @@ body.show-modal {
   }
 
   .modal__title {
-    margin-bottom: 20px;
-    font-weight: 500;
     font-size: 20px;
-    line-height: calc(23 / 20);
-
+    font-weight: 500;
+    line-height: 1.15;
+    margin-bottom: 20px;
+   
     @media screen and (min-width: 1280px) {
       margin: 0;
       font-size: 30px;
@@ -266,15 +332,46 @@ body.show-modal {
     }
   }
 
+  .modal__subtitle {
+    font-family: Roboto,sans-serif;
+    font-size: 12px;
+    line-height: 1.667;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+
+  .modal__list-left {
+    font-family: Roboto,sans-serif;
+    font-size: 12px;
+    line-height: 1.3;
+  }
+
   .modal__list-box {
+    padding: 0;
+    margin: 0;
     margin-bottom: 20px;
-    display: flex;
-    gap: 40px;
+
 
     @media screen and (min-width: 1280px) {
       gap: 83px;
     }
   }
+
+  .modal__list-item {
+    font-family: Roboto,sans-serif;
+    font-size: 12px;
+    line-height: 1.3;
+    margin-bottom: 10px;
+    display: flex;
+  }
+
+ .modal__descrpt {
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 1.7;
+    margin-bottom: 20px;
+    margin: 0;
+ }
 
 body.show-modal .modal {
   opacity: 1;

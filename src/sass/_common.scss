@@ -1,12 +1,22 @@
 @import '~node_modules/modern-normalize/modern-normalize.css';
 
+// .visually-hidden {
+//   position: absolute;
+//   width: 1px;
+//   height: 1px;
+//   margin: -1px;
+//   border: 0;
+//   padding: 0;
+//   clip: rect(0 0 0 0);
+//   overflow: hidden;
+// }
 .visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-  clip: rect(0 0 0 0);
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  border: 0 !important;
   overflow: hidden;
 }

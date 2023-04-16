@@ -11,6 +11,7 @@ import './js/team-modal.js';
 import './js/darktheme.js';
 import './js/library';
 import './js/searchByKeyword';
+import './js/filter/filterByWeeklyTrending';
 import './js/render/movie-modal';
 import './js/render/open-and-close-modal';
 import './js/loader';

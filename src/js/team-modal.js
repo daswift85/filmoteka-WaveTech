@@ -16,3 +16,17 @@ function toggleModal(event) {
   teamBackdropEl.classList.toggle('visually-hidden');
   document.body.classList.toggle('modal-open');
 }
+
+document.addEventListener('keydown', function (event) {
+  if (event.key === 'Escape') {
+    teamBackdropEl.classList.toggle('visually-hidden');
+    document.body.classList.toggle('modal-open');
+  }
+});
+
+window.addEventListener('click', function (event) {
+  if (event.target == teamBackdropEl) {
+    teamBackdropEl.classList.toggle('visually-hidden');
+    document.body.classList.toggle('modal-open');
+  }
+});

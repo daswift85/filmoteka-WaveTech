@@ -30,6 +30,6 @@ modal.addEventListener('click', ev => {
 });
 
 function getMovieId(e) {
-    idMovie = e.target.parentElement.parentElement.parentElement.dataset.id;
+    idMovie = e.target.parentElement.parentElement.dataset.id;
   return idMovie;
 };

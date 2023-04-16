@@ -11,3 +11,4 @@ import './js/team-modal.js';
 import './js/darktheme.js';
 import './js/library';
 import './js/searchByKeyword';
+import './js/filter/filterByWeeklyTrending';

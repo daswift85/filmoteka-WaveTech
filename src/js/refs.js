@@ -6,6 +6,8 @@ const refs = {
   searchForm: document.querySelector('.search__form'),
   searchInput: document.querySelector('.search__input'),
   searchSubmitButton: document.querySelector('.search__submit-button'),
+  // Кнопки фильтра
+  weeklyTrendBtn: document.querySelector('button[data-set="trending"]'),
 };
 
 export default refs;

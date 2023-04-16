@@ -7,7 +7,6 @@
     <link rel="shortcut icon" href="./images/film.png" type="image/png" />
     <link rel="stylesheet" href="./sass/index.scss" />
     <script type="module" src="./index.js"></script>
-    <script type="module" src="./js/testsandrender.js"></script>
   </head>
   <body>
     <div class="removeMy"></div>
@@ -19,10 +18,12 @@
     <include src="./partials/pagination.html"></include>
     <include src="./partials/loader.html"></include>
     <script src="/node_modules/vanilla-back-to-top/dist/vanilla-back-to-top.min.js"></script>
-    <script>addBackToTop({
-      diameter: 56,
-      backgroundColor: '#b92f2c',
-      textColor: '#fff'
-    })</script>
+    <script>
+      addBackToTop({
+        diameter: 56,
+        backgroundColor: '#b92f2c',
+        textColor: '#fff',
+      });
+    </script>
   </body>
 </html>

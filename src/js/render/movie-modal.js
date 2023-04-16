@@ -145,7 +145,7 @@ function createFilmCardMarkup(data){
       width="240"
       height="357"
     />
-    <div>
+    <div data-id=${data.id}>
       <h2 class="modal__title">${data.title}</h2>
       <div class="modal__list-box">
         <ul class="modal__list list">

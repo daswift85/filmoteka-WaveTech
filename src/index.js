@@ -18,3 +18,5 @@ import './js/loader';
 import './js/components/pagination.js';
 import './js/filter/filterByTopRated';
 import './js/filter/filterByNowPlaying';
+import './js/filter/filterByPopular';
+import './js/filter/filterByUpcoming';

@@ -24,14 +24,14 @@ body.dark-mode .toggle__input {
 }
 body .toggle__icon {
   transition: var(--transition-default);
-  background-image: url(./images/svg/icons.svg#moon);
+  background-image: url(../images/svg/icons.svg#moon);
   stroke: var(--white-color);
   fill: var(--white-color);
   width: 20px;
   height: 20px;
 }
 body.dark-mode .toggle__icon {
-  background-image: url(./images/svg/icons.svg#sun);
+  background-image: url(../images/svg/icons.svg#sun);
   stroke: var(--black-color);
   fill: var(--black-color);
   width: 20px;
@@ -163,14 +163,14 @@ body.dark-mode .gallery__title {
   }
   body .toggle__icon {
     transition: var(--transition-default);
-    background-image: url(./images/svg/icons.svg#sun);
+    background-image: url(../images/svg/icons.svg#sun);
     stroke: var(--black-color);
     fill: var(--black-color);
     width: 20px;
     height: 20px;
   }
   body.light-mode .toggle__icon {
-    background-image: url(./images/svg/icons.svg#moon);
+    background-image: url(../images/svg/icons.svg#moon);
     stroke: var(--white-color);
     fill: var(--white-color);
     width: 20px;

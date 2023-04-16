@@ -15,3 +15,4 @@ import './js/filter/filterByWeeklyTrending';
 import './js/render/movie-modal';
 import './js/render/open-and-close-modal';
 import './js/loader';
+import './js/components/pagination.js';

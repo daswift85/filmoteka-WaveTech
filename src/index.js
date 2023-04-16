@@ -16,3 +16,7 @@ import './js/render/movie-modal';
 import './js/render/open-and-close-modal';
 import './js/loader';
 import './js/components/pagination.js';
+import './js/filter/filterByTopRated';
+import './js/filter/filterByNowPlaying';
+import './js/filter/filterByPopular';
+import './js/filter/filterByUpcoming';

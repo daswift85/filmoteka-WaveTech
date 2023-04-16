@@ -7,6 +7,32 @@ body.dark-mode {
   background-color: #212121;
   color: var(--white-color);
 }
+body footer {
+  transition: all 0.3s ease;
+}
+body.dark-mode footer {
+  background-color: darkslategrey;
+}
+body .team-modal {
+  transition: all 0.3s ease;
+}
+body.dark-mode .team-modal {
+  background-color: #212121;
+}
+body .gallery__title {
+  transition: all 0.3s ease;
+}
+body.dark-mode .gallery__title {
+  color: var(--white-color);
+}
+body .footer-team-members {
+  transition: all 0.3s ease;
+  color: #545454;
+}
+body.dark-mode .footer-team-members {
+  color: var(--white-color);
+}
+
 @media (prefers-color-scheme: dark) {
   body {
     background-color: #212121;
@@ -16,5 +42,30 @@ body.dark-mode {
   body.light-mode {
     background-color: var(--background-color);
     color: var(--black-color);
+  }
+  body footer {
+    transition: all 0.3s ease;
+  }
+  body.light-mode footer {
+    background-color: #f7f7f7;
+  }
+  body .team-modal {
+    transition: all 0.3s ease;
+  }
+  body.light-mode .team-modal {
+    background-color: #f0f0f0;
+  }
+  body .gallery__title {
+    transition: all 0.3s ease;
+  }
+  body.light-mode .gallery__title {
+    color: var(--black-color);
+  }
+  body .footer-team-members {
+    transition: all 0.3s ease;
+    color: var(--white-color);
+  }
+  body.light-mode .footer-team-members {
+    color: #545454;
   }
 }

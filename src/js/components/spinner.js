@@ -52,6 +52,6 @@ export const spinner = function (value) {
   } else if (value === 'stop') {
     setTimeout(() => {
       spinner.hide();
-    }, 1000);
+    }, 800);
   }
 };

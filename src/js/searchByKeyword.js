@@ -40,10 +40,20 @@ refs.searchForm.addEventListener('submit', async event => {
   };
 
   const searchResults = await getMovieByKeyword(searchQuery, 1);
-  refs.gallery.innerHTML = '';
 
-  const moviesMarkup = createGalleryMarkup(searchResults.results);
-  refs.gallery.insertAdjacentHTML('beforeend', moviesMarkup);
+  if (searchResults.results.length === 0) {
+    Notiflix.Notify.warning(
+      'Notyflix: По вашему запросу ничего не найдено. Пожалуйста, повторите поиск.',
+      {
+        position: 'center-center',
+        timeout: 3000,
+      }
+    );
+  } else {
+    refs.gallery.innerHTML = '';
+    const moviesMarkup = createGalleryMarkup(searchResults.results);
+    refs.gallery.insertAdjacentHTML('beforeend', moviesMarkup);
+  }
 
   spinner('stop');
 

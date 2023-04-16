@@ -10,6 +10,8 @@ const refs = {
   weeklyTrendBtn: document.querySelector('button[data-set="trending"]'),
   topRatedBtn: document.querySelector('button[data-set="top_rated"]'),
   nowPlayingBtn: document.querySelector('button[data-set="now_playing"]'),
+  popularBtn: document.querySelector('button[data-set="popular"]'),
+  upcomingBtn: document.querySelector('button[data-set="upcoming"]'),
 
   loaderModal: document.querySelector('.modal__loader'),
   libraty: document.querySelector('#gallery-lib'),

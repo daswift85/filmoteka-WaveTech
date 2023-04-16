@@ -2,6 +2,14 @@ import axios from 'axios';
 
 const MAIN_URL = 'https://api.themoviedb.org/3';
 const API_KEY = '492f9e953404699f8c7d096022fa41fa';
+const BASE_URL_TOP = `https://api.themoviedb.org/3/movie/top_rated`;
+
+export async function getTopRatedMovie(page = 1) {
+  const response = await axios.get(
+    `${BASE_URL_TOP}?api_key=${API_KEY}&page=${page}`
+  );
+  return response.data;
+}
 
 export async function getMovieByTrend(type = 'day', page = 1) {
   const url = `${MAIN_URL}/trending/all/${type}?api_key=${API_KEY}&language=en-US&page=${page}`;

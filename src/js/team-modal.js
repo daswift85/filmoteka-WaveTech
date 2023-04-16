@@ -19,8 +19,15 @@ function toggleModal(event) {
 
 document.addEventListener('keydown', function (event) {
   if (event.key === 'Escape') {
-    teamBackdropEl.classList.toggle('visually-hidden');
-    document.body.classList.toggle('modal-open');
+    var teamBackdropEl = document.querySelector('.team-backdrop');
+    // Check if modal is currently open by checking if it does not have the 'visually-hidden' class
+    var modalIsOpen = !teamBackdropEl.classList.contains('visually-hidden');
+
+    if (modalIsOpen) {
+      // Add code to close the modal window by adding the 'visually-hidden' class to the modal element
+      teamBackdropEl.classList.add('visually-hidden');
+      document.body.classList.remove('modal-open');
+    }
   }
 });
 

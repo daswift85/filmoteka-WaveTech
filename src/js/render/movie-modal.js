@@ -145,19 +145,18 @@ function createFilmCardMarkup(data){
       width="240"
       height="357"
     />
-  <div data-id=${data.id}>
+  <div data-id="${data.id}">
   <h2 class="modal__title">${data.title}</h2>
   <ul class="modal__list-box">
     <li class="modal__list-item item-vote">
-      <span class="modal__list-right">Vote / Votes</span>
-      <span class="modal__list-vote">${data.vote_average.toFixed(1)}</span>
+      <span class="modal__list-right">Vote /Votes</span>
+      <span class="modal__list-vote">${data.vote_average.toFixed(1)}</span> 
+      <span class="modal__list-slash"> / </span> 
       <span class="modal__list-votes">${data.vote_count}</span>
     </li>
     <li class="modal__list-item">
       <span class="modal__list-right">Popularity</span>
-      <span class="modal__list-left"
-        >${data.popularity.toFixed(1) ?? '-'}</span
-      >
+      <span class="modal__list-left">${data.popularity.toFixed(1) ?? '-'}</span>
     </li>
     <li class="modal__list-item">
       <span class="modal__list-right">Original Title</span>
@@ -167,15 +166,6 @@ function createFilmCardMarkup(data){
       <span class="modal__list-right">Genre</span>
       <span class="modal__list-left">${getGenres(data.genres)}</span>
     </li>
-  </ul>
-  <ul class="modal__list list">
-    <li class="modal__list-item modal__left">
-      <p class="modal__list-left">
-      </p>
-    </li>
-    <li class="modal__list-item modal__left"></li>
-    <li class="modal__list-item modal__left"></li>
-    <li class="modal__list-item modal__left"></li>
   </ul>
   <h3 class="modal__subtitle">ABOUT</h3>
   <p class="modal__descrpt">${data.overview ?? '---'}</p>

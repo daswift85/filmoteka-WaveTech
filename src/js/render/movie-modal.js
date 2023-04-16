@@ -145,62 +145,49 @@ function createFilmCardMarkup(data){
       width="240"
       height="357"
     />
-    <div data-id=${data.id}>
-      <h2 class="modal__title">${data.title}</h2>
-      <div class="modal__list-box">
-        <ul class="modal__list list">
-          <li class="modal__list-item">
-            <p class="modal__list-rigth">Vote/Votes </p>
-          </li>
-          <li class="modal__list-item">
-            <p class="modal__list-rigth">Popularity</p>
-          </li>
-          <li class="modal__list-item">
-            <p class="modal__list-rigth">Original Title</p>
-          </li>
-          <li class="modal__list-item">
-            <p class="modal__list-rigth">Genre</p>
-          </li>
-        </ul>
-        <ul class="modal__list list">
-          <li class="modal__list-item modal__left">
-            <p class="modal__list-left">
-    <span class="modal__list-vote">${data.vote_average.toFixed(1)}</span>
-                <span class="modal__list-slesh">/</span>
-                <span class="modal__list-votes">${data.vote_count}</span>
-    </p>
-          </li>
-          <li class="modal__list-item modal__left">
-            <p class="modal__list-left">${
-              data.popularity.toFixed(1) ?? '-'
-            } </p>
-          </li>
-          <li class="modal__list-item modal__left">
-            <p class="modal__list-left">${data.title}</p>
-          </li>
-          <li class="modal__list-item modal__left">
-            <p class="modal__list-left">${getGenres(data.genres)}</p>
-          </li>
-        </ul>
-      </div>
-      <h3 class="modal__subtitle">ABOUT</h3>
-      <p class="modal__descrpt">
-       ${data.overview ?? '---'}
+  <div data-id=${data.id}>
+  <h2 class="modal__title">${data.title}</h2>
+  <ul class="modal__list-box">
+    <li class="modal__list-item item-vote">
+      <span class="modal__list-right">Vote / Votes</span>
+      <span class="modal__list-vote">${data.vote_average.toFixed(1)}</span>
+      <span class="modal__list-votes">${data.vote_count}</span>
+    </li>
+    <li class="modal__list-item">
+      <span class="modal__list-right">Popularity</span>
+      <span class="modal__list-left"
+        >${data.popularity.toFixed(1) ?? '-'}</span
+      >
+    </li>
+    <li class="modal__list-item">
+      <span class="modal__list-right">Original Title</span>
+      <span class="modal__list-left">${data.title}</span>
+    </li>
+    <li class="modal__list-item">
+      <span class="modal__list-right">Genre</span>
+      <span class="modal__list-left">${getGenres(data.genres)}</span>
+    </li>
+  </ul>
+  <ul class="modal__list list">
+    <li class="modal__list-item modal__left">
+      <p class="modal__list-left">
       </p>
-       
-      <ul class="modal__btn-list list">
-        <li>
-          <button type="button" class="modal__btn" data-btn="addToWatched">
-            add to Watched
-          </button>
-        </li>
-        <li>
-          <button type="button" class="modal__btn" data-btn="addToQueue">
-            add to queue
-          </button>
-        </li>
-      </ul>
-    </div>`;
+    </li>
+    <li class="modal__list-item modal__left"></li>
+    <li class="modal__list-item modal__left"></li>
+    <li class="modal__list-item modal__left"></li>
+  </ul>
+  <h3 class="modal__subtitle">ABOUT</h3>
+  <p class="modal__descrpt">${data.overview ?? '---'}</p>
+  <div class="modal__btn-list list">
+    <button type="button" class="modal__btn" data-btn="addToWatched">
+      add to Watched
+    </button>
+    <button type="button" class="modal__btn" data-btn="addToQueue">
+      add to queue
+    </button>
+  </div>
+</div>`;
 
   refs.modalRef.innerHTML = markup;
   refs.teamRef.innerHTML = '';

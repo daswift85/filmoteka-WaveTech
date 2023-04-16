@@ -2,13 +2,17 @@ import axios from 'axios';
 
 const MAIN_URL = 'https://api.themoviedb.org/3';
 const API_KEY = '492f9e953404699f8c7d096022fa41fa';
-const BASE_URL_TOP = `https://api.themoviedb.org/3/movie/top_rated`;
 
-export async function getTopRatedMovie(page = 1) {
-  const response = await axios.get(
-    `${BASE_URL_TOP}?api_key=${API_KEY}&page=${page}`
-  );
-  return response.data;
+export async function getTopRatedMovie(type = 'top_rated', page = 1) {
+  try {
+    const response = await axios.get(
+      `${MAIN_URL}/movie/${type}?api_key=${API_KEY}&page=${page}`
+    );
+    return response.data;
+  } catch (error) {
+    console.error('Ошибка при выполнении запроса:', error);
+    // Дополнительная обработка ошибки, например, выброс исключения или возврат значения по умолчанию
+  }
 }
 
 export async function getMovieByTrend(type = 'day', page = 1) {

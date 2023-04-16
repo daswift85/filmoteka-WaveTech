@@ -9,6 +9,7 @@ const refs = {
   // Кнопки фильтра
   weeklyTrendBtn: document.querySelector('button[data-set="trending"]'),
   topRatedBtn: document.querySelector('button[data-set="top_rated"]'),
+  nowPlayingBtn: document.querySelector('button[data-set="now_playing"]'),
 
   loaderModal: document.querySelector('.modal__loader'),
   libraty: document.querySelector('#gallery-lib'),

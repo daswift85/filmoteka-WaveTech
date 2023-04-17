@@ -1,0 +1,35 @@
+.scroll {
+  display: none;
+  position: fixed;
+  right: 20px;
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+  border-radius: 50%;
+  z-index: 19;
+}
+.scroll--up {
+  bottom: 60px;
+  @media screen and (min-width: 768px) {
+    right: 30px;
+  }
+}
+.scroll--down {
+  bottom: 20px;
+  @media screen and (min-width: 768px) {
+    right: 30px;
+  }
+}
+.scroll--show {
+  display: block;
+}
+.scroll__icon {
+  fill: #b92f2c;
+  transition: 250ms cubic-bezier(0.8, 0.4, 0.3, 0.9);
+  width: 44px;
+  height: 44px;
+  &:hover,
+  &:focus {
+    fill: #000000;
+  }
+}

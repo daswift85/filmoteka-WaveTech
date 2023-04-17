@@ -21,3 +21,4 @@ import './js/filter/filterByNowPlaying';
 import './js/filter/filterByPopular';
 import './js/filter/filterByUpcoming';
 import './js/btnaddtoLocalStorage';
+import './js/components/toTopBottomBtn';

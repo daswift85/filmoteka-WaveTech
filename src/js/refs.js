@@ -1,4 +1,9 @@
 const refs = {
+  heder: document.querySelector('.header'),
+  footer: document.querySelector('.footer'),
+  scrollTop: document.querySelector('#scrollTop'),
+  scrollDown: document.querySelector('#scrollDown'),
+
   gallery: document.querySelector('.js-gallery'),
   loader: document.querySelector('.loader'),
   spinner: document.querySelector('[data-index="spinner"]'),
@@ -14,7 +19,9 @@ const refs = {
   upcomingBtn: document.querySelector('button[data-set="upcoming"]'),
 
   loaderModal: document.querySelector('.modal__loader'),
-  libraty: document.querySelector('#gallery-lib'),
+  library: document.querySelector('.gallery-lib'),
+  libraryWatchedBtn: document.querySelector('button[data-value="watched"]'),
+  libraryQueueBtn: document.querySelector('button[data-value="queue"]'),
   closeModalBtn: document.querySelector('.modal__btn-close'),
   divBackdrop: document.querySelector('.js-backdrop'),
   modalRef: document.querySelector('.modal__wrap'),
@@ -22,3 +29,6 @@ const refs = {
 };
 
 export default refs;
+
+
+console.log(refs.library);

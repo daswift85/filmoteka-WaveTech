@@ -17,8 +17,6 @@ h2 {
   font-weight: 500; /* Задание начертания Medium */
 }
 
-
-
 .backdrop {
   position: fixed;
   top: 0;
@@ -62,13 +60,20 @@ body.show-modal {
   transition: .3s linear;
   cursor: pointer;
   width: 125px;
-  white-space: nowrap;
 }
 
+.modal__btn:hover {
+  background-color: var(--accent-color);
+  color: var(--white-color);
+}
 
 .modal__btn-list {
   display: flex;
   justify-content: space-between;
+
+  @media (min-width: 1280px) {
+    justify-content: flex-start;
+  }
 }
 
 .modal__btn-close {
@@ -98,14 +103,17 @@ body.show-modal {
   text-align: left;
   width: 280px;
   height: 980px;
+  bottom: 20px;
 
   @media screen and (max-width: 767px) {
+   
     top: 20px;
     left: 50%;
     transform: translateX(-50%) scale(0.8);
   }
 
   @media screen and (min-width: 768px) {
+    margin-top: 100px;
     padding-top: 40px;
     padding-right: 72px;
     padding-bottom: 40px;
@@ -198,43 +206,6 @@ body.show-modal {
       padding: 0;
     }
   }
-
-  // &__btn {
-  //   width: 125px;
-  //   height: 34px;
-  //   white-space: nowrap;
-  //   font-weight: 500;
-  //   font-size: 12px;
-  //   line-height: calc(16 / 12);
-  //   display: flex;
-  //   align-items: center;
-  //   justify-content: center;
-  //   text-transform: uppercase;
-  //   padding: 10px 12px;
-  //   border-radius: 100px;
-  //   border: 1px solid #000000;
-  //   background-color: transparent;
-  //   cursor: pointer;
-  //   color: #B92F2C;
-  //   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
-  //   &:hover,
-  //   &:focus {
-  //     color: #ffffff;
-  //     background-color: #B92F2C;
-  //     border: none;
-  //     outline: none;
-  //   }
-
-  //   @media screen and (min-width: 768px) {
-  //     padding: 12px 18px;
-      
-  //   }
-
-  //   @media screen and (min-width: 1280px) {
-  //     padding: 14px 32px;
-  //   }
-  // }
 
   &__btn-trailer {
     margin-bottom: 20px;
@@ -337,6 +308,7 @@ body.show-modal {
       font-size: 30px;
       line-height: calc(35 / 30);
       color: #000000;
+      margin-bottom: 20px;
     }
   }
 
@@ -391,6 +363,7 @@ body.show-modal .modal {
 
   @media screen and (min-width: 768px) {
     transform: translate(-50%, -50%) scale(1);
+    margin-top: 200px;
   }
 
   @media screen and (min-width: 1280px) {

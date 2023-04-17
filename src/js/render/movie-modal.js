@@ -30,111 +30,111 @@ function setQueueLocalStoradge(arr) {
 }
 
 function onAddToWatched(id) {
-    if (watched.includes(id)) {
-     return;
-   }
-   watched.push(id);
-   setWatchedLocalStoradge(watched);
-   
- }
- 
+  if (watched.includes(id)) {
+    return;
+  }
+  watched.push(id);
+  setWatchedLocalStoradge(watched);
+
+}
+
 function onAddToQueue(id) {
-     if (queue.includes(id)) {
-     return;
-   }
-   queue.push(id);
-   setQueueLocalStoradge(queue);
- }
+  if (queue.includes(id)) {
+    return;
+  }
+  queue.push(id);
+  setQueueLocalStoradge(queue);
+}
 
 export function loadIntoModal(id) {
+  showHideLoader(refs.loaderModal);
+  const film = getMovieInfo(id).then(data => {
     showHideLoader(refs.loaderModal);
-    const film = getMovieInfo(id).then(data => {
-        showHideLoader(refs.loaderModal);
-        getMovieTrailer(id)
-        .then(movies => {
-            if(movies && movies.length){
-                const objTrailer = movies.find(movie => movie.type === 'Trailer');
-            if (objTrailer && objTrailer.type !== 'Trailer'){
-                return;
-            }
-            keyTrailer = objTrailer ? objTrailer.key : '';
-            }
-            refresh(data, id, keyTrailer);
-            keyTrailer = '';
-          })
-          .catch(error => {
-            refresh(data, id);
-          });
-        });
+    getMovieTrailer(id)
+      .then(movies => {
+        if (movies && movies.length) {
+          const objTrailer = movies.find(movie => movie.type === 'Trailer');
+          if (objTrailer && objTrailer.type !== 'Trailer') {
+            return;
+          }
+          keyTrailer = objTrailer ? objTrailer.key : '';
+        }
+        refresh(data, id, keyTrailer);
+        keyTrailer = '';
+      })
+      .catch(error => {
+        refresh(data, id);
+      });
+  });
 }
 
 function refresh(data, id, keyTrailer = '') {
-    if (!createFilmCardMarkup(data)) {
-      return;
-    }
-    const addWatchedRef = document.querySelector('[data-btn=addToWatched]');
-    const addQueueRef = document.querySelector('[data-btn=addToQueue]');
+  if (!createFilmCardMarkup(data)) {
+    return;
+  }
+  const addWatchedRef = document.querySelector('[data-btn=addToWatched]');
+  const addQueueRef = document.querySelector('[data-btn=addToQueue]');
 
-    if(watched.includes(id)){
-        addWatchedRef.textContent = 'Is in watched';
-        addWatchedRef.style.backgroundColor = '#ff6b01';
-        addWatchedRef.style.color = '#ffffff';
+  if (watched.includes(id)) {
+    addWatchedRef.textContent = 'Is in watched';
+    addWatchedRef.style.backgroundColor = '#ff6b01';
+    addWatchedRef.style.color = '#ffffff';
+  }
+  if (queue.includes(id)) {
+    addQueueRef.textContent = 'Is in queue';
+    addQueueRef.style.backgroundColor = '#ff6b01';
+    addQueueRef.style.color = '#ffffff';
+  }
+  addWatchedRef.addEventListener('click', () => {
+    if (watched.includes(id)) {
+      watched.splice(watched.indexOf(id), 1);
+      setWatchedLocalStoradge(watched);
+      addWatchedRef.style.backgroundColor = '#ffffff';
+      getArrayOfMovies(watched)
+        .then(data => {
+          if (refs.library) {
+            refs.library.innerHTML = createGalleryMarkup(data);
+          }
+        })
+        .catch(error => console.log(error));
+    } else {
+      onAddToWatched(id);
+      setWatchedLocalStoradge(watched);
     }
+
+    refs.modalRef.innerHTML = '';
+    refresh(data, id, keyTrailer);
+  });
+
+  addQueueRef.addEventListener('click', () => {
     if (queue.includes(id)) {
-        addQueueRef.textContent = 'Is in queue';
-        addQueueRef.style.backgroundColor = '#ff6b01';
-        addQueueRef.style.color = '#ffffff';
-      }
-      addWatchedRef.addEventListener ('click', () => {
-        if (watched.includes(id)) {
-            watched.splice(watched.indexOf(id), 1);
-            setWatchedLocalStoradge(watched);
-            addWatchedRef.style.backgroundColor = '#ffffff';
-            getArrayOfMovies(watched)
-            .then(data =>{
-                if(refs.libraty){
-                    refs.libraty.innerHTML = createGalleryMarkup(data);
-                }
-            })
-            .catch(error => console.log(error));
-        }else {
-            onAddToWatched(id);
-            setWatchedLocalStoradge(watched);
-        }
+      queue.splice(queue.indexOf(id), 1);
+      setQueueLocalStoradge(queue);
+      addQueueRef.style.backgroundColor = '#ffffff';
 
-        refs.modalRef.innerHTML = '';
-        refresh(data, id, keyTrailer);
+      getArrayOfMovies(queue).then(data => {
+        if (refs.library) {
+          refs.library.innerHTML = createGalleryMarkup(data);
+        }
       });
-
-      addQueueRef.addEventListener('click', () =>{
-        if(queue.includes(id)){
-            queue.splice(queue.indexOf(id), 1);
-            setQueueLocalStoradge(queue);
-            addQueueRef.style.backgroundColor = '#ffffff';
-
-            getArrayOfMovies(queue).then(data =>{
-                if(refs.libraty){
-                    refs.libraty.innerHTML = createGalleryMarkup(data);
-                }
-            });
-        }else{
-            onAddToQueue(id);
-            setQueueLocalStoradge(queue);
-        }
-        refs.modalRef.innerHTML = '';
-        refresh(data, id, keyTrailer);
-      });  
+    } else {
+      onAddToQueue(id);
+      setQueueLocalStoradge(queue);
+    }
+    refs.modalRef.innerHTML = '';
+    refresh(data, id, keyTrailer);
+  });
 }
 
-function createFilmCardMarkup(data){
-    let status = true;
-    if(!data){
-        refs.modalRef.innerHTML =
+function createFilmCardMarkup(data) {
+  let status = true;
+  if (!data) {
+    refs.modalRef.innerHTML =
       '<div class="modal__empty">Sorry, info is unavailable</div>';
     status = false;
     return;
-    }
-    const poster = data.poster_path
+  }
+  const poster = data.poster_path
     ? `https://image.tmdb.org/t/p/w500${data.poster_path}`
     : noPoster;
 
@@ -192,5 +192,5 @@ function createFilmCardMarkup(data){
 }
 
 function getGenres(arrOfGenres) {
-    return arrOfGenres.map(genr => genr.name).join(', ');
-  }
+  return arrOfGenres.map(genr => genr.name).join(', ');
+}

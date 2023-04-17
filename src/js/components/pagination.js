@@ -119,7 +119,7 @@ function onPaginationClick(event) {
 
 let pageSize = 9;
 
-function defineResultsPerPage() {
+function resultsPerPage() {
   if (window.innerWidth >= 1024) {
     pageSize = 9;
   } else if (window.innerWidth >= 768 && window.innerWidth < 1024) {

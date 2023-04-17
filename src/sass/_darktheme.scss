@@ -65,13 +65,11 @@ body .filter__button:hover,
 body .filter__button:focus,
 body .filter_is_active {
   color: var(--black-color);
- 
 }
 body.dark-mode .filter__button:hover,
 body.dark-mode .filter__button:focus,
 body.dark-mode .filter_is_active {
   color: var(--black-color);
-  
 }
 
 // modal
@@ -240,7 +238,7 @@ body.dark-mode .gallery__title {
   body .modal__descrpt {
     color: var(--white-color);
   }
-  body.light-theme .modal__descrpt {
+  body.light-mode .modal__descrpt {
     color: var(--black-color);
   }
 

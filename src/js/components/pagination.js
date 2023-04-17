@@ -15,6 +15,9 @@ const rightArrowRef = document.querySelector('.arrow-right');
 const leftArrowRef = document.querySelector('.arrow-left');
 const prevDotsRef = document.querySelector('#previous');
 const afterDotsRef = document.querySelector('#after');
+const gallery = document.querySelector('.gallery'); // Replace '#gallery' with the actual selector for your gallery element
+const inputRef = document.querySelector('.search__input'); // Replace '#input' with the actual selector for your input element
+
 
 paginationRef.addEventListener('click', onPaginationClick);
 

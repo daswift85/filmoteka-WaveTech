@@ -1,4 +1,9 @@
 const refs = {
+  heder: document.querySelector('.header'),
+  footer: document.querySelector('.footer'),
+  scrollTop: document.querySelector('#scrollTop'),
+  scrollDown: document.querySelector('#scrollDown'),
+
   gallery: document.querySelector('.js-gallery'),
   loader: document.querySelector('.loader'),
   spinner: document.querySelector('[data-index="spinner"]'),

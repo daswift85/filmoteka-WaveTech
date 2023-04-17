@@ -2,8 +2,6 @@ $size: 12px;
 $size2: 8px;
 $time: 1;
 
-$orange-color: #bc312e;
-
 .loader {
   position: fixed;
   top: 50%;
@@ -15,7 +13,7 @@ $orange-color: #bc312e;
   align-items: center;
 
   .loading {
-    color: $orange-color;
+    color: #bc312e;
     margin: 5px 0;
     text-transform: uppercase;
     text-align: center;
@@ -38,15 +36,15 @@ $orange-color: #bc312e;
     margin: 0 (-$size / 2);
     border-left: $size solid transparent;
     border-right: $size solid transparent;
-    border-bottom: ($size * 1.8) solid $orange-color;
+    border-bottom: ($size * 1.8) solid #bc312e;
     animation: blink $time + s infinite;
-    filter: drop-shadow(0 0 ($size * 1.5) $orange-color);
+    filter: drop-shadow(0 0 ($size * 1.5) #bc312e);
 
     @media screen and (max-width: 768px) {
       margin: 0 (-$size2 / 2);
       border-left: $size2 solid transparent;
       border-right: $size2 solid transparent;
-      border-bottom: ($size2 * 1.8) solid $orange-color;
+      border-bottom: ($size2 * 1.8) solid #bc312e;
     }
 
     &.down {

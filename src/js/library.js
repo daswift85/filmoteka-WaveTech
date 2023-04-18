@@ -3,7 +3,7 @@ import refs from './refs';
 import { createGalleryMarkup } from './render/markup-cards-main-page';
 // import { spinner } from './components/spinner';
 import { watched, queue } from './render/movie-modal';
-import noPoster from './../images/noPoster.png';
+import plug from './../images/plug-nobg.png';
 
 
 const WatcedBtn = refs.libraryWatchedBtn;
@@ -12,7 +12,7 @@ console.log(WatcedBtn);
 
 const aLibraryHeader = document.querySelector('#myLibrarySwitchBtn');
 
-// console.dir(aLibraryHeader);
+
 
 
 
@@ -31,13 +31,13 @@ function showWatched() {
     WatcedBtn.classList.add('js-active');
     QueueBtn.classList.remove('js-active');
   } else { WatcedBtn.classList.remove('js-active') }
-  if (!watched.length) {
-    refs.library.innerHTML = `
-      <li class="nothing">
-        <img class="nothing-img" src="${noPoster}" alt="no nothing" />
-      </li>`;
-    return;
-  }
+  // if (!watched.length) {
+  //   refs.library.innerHTML = `
+  //     <li class="nothing">
+  //       <img class="nothing-img" src="${noPoster}" alt="no nothing" />
+  //     </li>`;
+  //   return;
+  // }
   watchedArray();
 }
 
@@ -49,13 +49,13 @@ function showQueue() {
     WatcedBtn.classList.remove('js-active');
     WatcedBtn.classList.remove('library__current-link');
   } else { WatcedBtn.classList.remove('js-active') }
-  if (!watched.length) {
-    refs.library.innerHTML = `
-      <li class="nothing">
-        <img class="nothing-img" src="${noPoster}" alt="no nothing" />
-      </li>`;
-    return;
-  }
+  // if (!watched.length) {
+  //   refs.library.innerHTML = `
+  //     <li class="nothing">
+  //       <img class="nothing-img" src="${noPoster}" alt="no nothing" />
+  //     </li>`;
+  //   return;
+  // }
   queueArray();
 }
 
@@ -81,11 +81,15 @@ export async function takeFromLocal(key) {
 function watchedArray() {
   takeFromLocal('watched')
     .then(data => {
-      return createGalleryMarkup(data);
-    })
-    .then(data => {
-      refs.library.innerHTML = '';
-      return refs.library.insertAdjacentHTML('beforeend', data);
+      if (data.length === 0) {// Check if data is empty
+        refs.library.innerHTML = `
+          <li class="nothing">
+            <img class="nothing-img" src="${plug}" alt="no nothing" />
+          </li>`;
+      } else {
+        const markup = createGalleryMarkup(data);
+        refs.library.innerHTML = markup;
+      }
     })
     .catch(error => console.log());
   if (
@@ -96,14 +100,18 @@ function watchedArray() {
   }
 }
 
-function queueArray() {
-  takeFromLocal('queue')
+function watchedArray() {
+  takeFromLocal('watched')
     .then(data => {
-      return createGalleryMarkup(data);
-    })
-    .then(data => {
-      refs.library.innerHTML = '';
-      return refs.library.insertAdjacentHTML('beforeend', data);
+      if (data.length === 0) { // Check if data is empty
+        refs.library.innerHTML = `
+          <li class="nothing">
+            <img class="nothing-img" src="${plug}" alt="no nothing" />
+          </li>`;
+      } else {
+        const markup = createGalleryMarkup(data);
+        refs.library.innerHTML = markup;
+      }
     })
     .catch(error => console.log());
   if (
@@ -113,3 +121,4 @@ function queueArray() {
     document.querySelectorAll('.gallery__item').forEach(card => card.remove());
   }
 }
+

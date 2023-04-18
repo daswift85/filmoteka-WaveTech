@@ -65,13 +65,11 @@ body .filter__button:hover,
 body .filter__button:focus,
 body .filter_is_active {
   color: var(--black-color);
- 
 }
 body.dark-mode .filter__button:hover,
 body.dark-mode .filter__button:focus,
 body.dark-mode .filter_is_active {
   color: var(--black-color);
-  
 }
 
 // modal
@@ -147,6 +145,42 @@ body .gallery__title {
 }
 body.dark-mode .gallery__title {
   color: var(--white-color);
+}
+
+// Scroll button
+body .scroll__icon:hover,
+body .scroll__icon:focus {
+  fill: #000;
+}
+body.dark-mode .scroll__icon:hover,
+body.dark-mode .scroll__icon:focus {
+  fill: var(--white-color);
+}
+
+// Pagination
+body .arrow-left,
+body .arrow-right {
+  background-color: #f7f7f7;
+  fill: var(--black-color);
+}
+body.dark-mode .arrow-left,
+body.dark-mode .arrow-right {
+  background-color: var(--black-color);
+  fill: var(--white-color);
+}
+body .pagination-button {
+  color: var(--black-color);
+}
+body.dark-mode .pagination-button {
+  color: var(--white-color);
+}
+body .pagination-button:hover {
+  color: #fff;
+  background-color: #b92f2c;
+}
+body.dark-mode .pagination-button:hover {
+  color: #fff;
+  background-color: #b92f2c;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -240,7 +274,7 @@ body.dark-mode .gallery__title {
   body .modal__descrpt {
     color: var(--white-color);
   }
-  body.light-theme .modal__descrpt {
+  body.light-mode .modal__descrpt {
     color: var(--black-color);
   }
 
@@ -279,5 +313,41 @@ body.dark-mode .gallery__title {
   }
   body.light-mode .gallery__title {
     color: var(--black-color);
+  }
+
+  // Scroll button
+  body .scroll__icon:hover,
+  body .scroll__icon:focus {
+    fill: var(--white-color);
+  }
+  body.light-mode .scroll__icon:hover,
+  body.light-mode .scroll__icon:focus {
+    fill: #000;
+  }
+
+  // Pagination
+  body .arrow-left,
+  body .arrow-right {
+    background-color: var(--black-color);
+    fill: var(--white-color);
+  }
+  body.light-mode .arrow-left,
+  body.light-mode .arrow-right {
+    background-color: #f7f7f7;
+    fill: var(--black-color);
+  }
+  body .pagination-button {
+    color: var(--white-color);
+  }
+  body.light-mode .pagination-button {
+    color: var(--black-color);
+  }
+  body .pagination-button:hover {
+    color: #fff;
+    background-color: #b92f2c;
+  }
+  body.light-mode .pagination-button:hover {
+    color: #fff;
+    background-color: #b92f2c;
   }
 }

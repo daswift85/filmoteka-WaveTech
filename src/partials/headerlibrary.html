@@ -6,15 +6,18 @@
           <a class="library__nav-link" href="../index.html">Home</a>
         </li>
         <li class="library__nav-item">
-          <a class="library__nav-link current-link" href="./mylibrary.html"
-            >My library</a
-          >
+          <a class="library__nav-link current-link" href="./mylibrary.html">My library</a>
         </li>
         <li>
           <button class="toggle__input" type="button">
-            <svg class="toggle__icon">
-              <use href="../images/svg/icons.svg#sun"></use>
-            </svg>
+            <div class="toggle__icon">
+              <svg class="sun">
+                <use href="../images/svg/icons.svg#sun"></use>
+              </svg>
+              <svg class="moon">
+                <use href="../images/svg/icons.svg#moon"></use>
+              </svg>
+            </div>
           </button>
         </li>
       </ul>
@@ -23,9 +26,7 @@
     <div class="library__btn">
       <ul class="library__btn-list">
         <li class="library__item">
-          <button type="button" data-value="watched"
-            class="library__link library__current-link"
-            >WATCHED</button>
+          <button type="button" data-value="watched" class="library__link library__current-link">WATCHED</button>
         </li>
         <li>
           <button type="button" data-value="queue" class="library__link">QUEUE</button>

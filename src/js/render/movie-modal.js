@@ -142,8 +142,7 @@ function createFilmCardMarkup(data) {
       class="modal__img"
       src="${poster}"
       alt=""
-      width="240"
-      height="357"
+     
     />
   <div data-id="${data.id}">
   <h2 class="modal__title">${data.title}</h2>

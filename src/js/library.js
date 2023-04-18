@@ -8,7 +8,7 @@ import noPoster from './../images/noPoster.png';
 
 const WatcedBtn = refs.libraryWatchedBtn;
 const QueueBtn = refs.libraryQueueBtn;
-// console.log(WatcedBtn);
+console.log(WatcedBtn);
 
 const aLibraryHeader = document.querySelector('#myLibrarySwitchBtn');
 
@@ -34,7 +34,7 @@ function showWatched() {
   if (!watched.length) {
     refs.library.innerHTML = `
       <li class="nothing">
-        <img src="noPoster" alt="no nothing" />
+        <img class="nothing-img" src="${noPoster}" alt="no nothing" />
       </li>`;
     return;
   }
@@ -48,7 +48,13 @@ function showQueue() {
     QueueBtn.classList.add('js-active');
     WatcedBtn.classList.remove('js-active');
     WatcedBtn.classList.remove('library__current-link');
-
+  } else { WatcedBtn.classList.remove('js-active') }
+  if (!watched.length) {
+    refs.library.innerHTML = `
+      <li class="nothing">
+        <img class="nothing-img" src="${noPoster}" alt="no nothing" />
+      </li>`;
+    return;
   }
   queueArray();
 }

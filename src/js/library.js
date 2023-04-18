@@ -7,16 +7,19 @@ import noPoster from './../images/noPoster.png';
 
 const WatcedBtn = refs.libraryWatchedBtn;
 const QueueBtn = refs.libraryQueueBtn;
+console.log(WatcedBtn);
 
 const aLibraryHeader = document.querySelector('#myLibrarySwitchBtn');
 
 // console.dir(aLibraryHeader);
 
-// if (aLibraryHeader.classList.contains('js-in-library')) {
-//   WatcedBtn.addEventListener('click', showWatched);
-//   QueueBtn.addEventListener('click', showQueue);
-  watchedArray();
-// }
+
+watchedArray();
+
+if (WatcedBtn) {
+    WatcedBtn.addEventListener('click', showWatched);        
+    QueueBtn.addEventListener('click', showQueue);    
+}
 
 function showWatched() {
   if (!WatcedBtn.classList.contains('js-active')) {
@@ -25,13 +28,13 @@ function showWatched() {
     WatcedBtn.classList.add('js-active');
     QueueBtn.classList.remove('js-active');
   }
-//   if (!watched.length) {
-//     refs.library.innerHTML = `
-//       <li class="nothing">
-//         <img src="noPoster" alt="no nothing" />
-//       </li>`;
-//     return;
-//   }
+  if (!watched.length) {
+    refs.library.innerHTML = `
+      <li class="nothing">
+        <img src="noPoster" alt="no nothing" />
+      </li>`;
+    return;
+  }
   watchedArray();
 }
 
@@ -56,7 +59,7 @@ export async function takeFromLocal(key) {
           movies.push(data);
         })
         .catch(error => {
-          console.log(error);
+          console.log();
         });
     }
   }
@@ -73,7 +76,7 @@ function watchedArray() {
       refs.library.innerHTML = '';
       return refs.library.insertAdjacentHTML('beforeend', data);
     })
-    .catch(error => console.log(error));
+    .catch(error => console.log());
   if (
     localStorage.getItem('watched') === null &&
     localStorage.getItem('queue') === null
@@ -88,10 +91,10 @@ function queueArray() {
       return createGalleryMarkup(data);
     })
     .then(data => {
-    //   refs.library.innerHTML = '';
+      refs.library.innerHTML = '';
       return refs.library.insertAdjacentHTML('beforeend', data);
     })
-    .catch(error => console.log(error));
+    .catch(error => console.log());
   if (
     localStorage.getItem('watched') === null &&
     localStorage.getItem('queue') === null

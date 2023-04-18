@@ -12,7 +12,7 @@ function openModal(event){
     }
 
     const movieId = getParentEl.dataset.movie;
-console.log(movieId);
+// console.log(movieId);
     loadIntoModal(movieId);
 
     document.body.classList.add('show-modal');  

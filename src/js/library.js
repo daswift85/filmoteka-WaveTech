@@ -5,21 +5,24 @@ import { createGalleryMarkup } from './render/markup-cards-main-page';
 import { watched, queue } from './render/movie-modal';
 import noPoster from './../images/noPoster.png';
 
+
 const WatcedBtn = refs.libraryWatchedBtn;
 const QueueBtn = refs.libraryQueueBtn;
-console.log(WatcedBtn);
+// console.log(WatcedBtn);
 
 const aLibraryHeader = document.querySelector('#myLibrarySwitchBtn');
 
 // console.dir(aLibraryHeader);
 
 
+
 watchedArray();
 
 if (WatcedBtn) {
-    WatcedBtn.addEventListener('click', showWatched);        
-    QueueBtn.addEventListener('click', showQueue);    
+  WatcedBtn.addEventListener('click', showWatched);
+  QueueBtn.addEventListener('click', showQueue);
 }
+
 
 function showWatched() {
   if (!WatcedBtn.classList.contains('js-active')) {
@@ -27,7 +30,7 @@ function showWatched() {
     QueueBtn.disabled = false;
     WatcedBtn.classList.add('js-active');
     QueueBtn.classList.remove('js-active');
-  }
+  } else { WatcedBtn.classList.remove('js-active') }
   if (!watched.length) {
     refs.library.innerHTML = `
       <li class="nothing">
@@ -44,6 +47,8 @@ function showQueue() {
     WatcedBtn.disabled = false;
     QueueBtn.classList.add('js-active');
     WatcedBtn.classList.remove('js-active');
+    WatcedBtn.classList.remove('library__current-link');
+
   }
   queueArray();
 }
@@ -63,8 +68,8 @@ export async function takeFromLocal(key) {
         });
     }
   }
-//   console.log(movies);
-    return movies;
+  //   console.log(movies);
+  return movies;
 }
 
 function watchedArray() {

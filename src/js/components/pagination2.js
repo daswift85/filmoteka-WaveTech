@@ -168,37 +168,37 @@ refs.popularBtn.addEventListener('click', async (event) => {
   });
 
   //// 6 listener
-  const searchQuery = refs.searchInput.value.trim();
-  refs.searchForm.addEventListener('submit', async event => {
-    async function loadMoviesByTrend6(page) {
-      refs.gallery.innerHTML = '';
-      const data = await getMovieByKeyword(searchQuery, page);
-      refs.gallery.insertAdjacentHTML(
-        'beforeend',
-        createGalleryMarkup(data.results)
-      );
-    }
-    let currentPage = 1; // Initial page number
-    const pagination = initPagination(100, currentPage, onPageChange);
+//   const searchQuery = refs.searchInput.value.trim();
+//   refs.searchForm.addEventListener('submit', async event => {
+//     async function loadMoviesByTrend6(page) {
+//       refs.gallery.innerHTML = '';
+//       const data = await getMovieByKeyword(searchQuery, page);
+//       refs.gallery.insertAdjacentHTML(
+//         'beforeend',
+//         createGalleryMarkup(data.results)
+//       );
+//     }
+//     let currentPage = 1; // Initial page number
+//     const pagination = initPagination(100, currentPage, onPageChange);
   
-    async function onPageChange(newPage) { // Update to use async function
-      currentPage = newPage;
-      await loadMoviesByTrend6(currentPage); // Use await when calling loadMoviesByTrend6
-    }
+//     async function onPageChange(newPage) { // Update to use async function
+//       currentPage = newPage;
+//       await loadMoviesByTrend6(currentPage); // Use await when calling loadMoviesByTrend6
+//     }
   
-    await loadMoviesByTrend6(currentPage); // Use await to ensure data is fetched before updating DOM
-  });
+//     await loadMoviesByTrend6(currentPage); // Use await to ensure data is fetched before updating DOM
+//   });
   
-  export async function getMovieByKeyword(query, page) {
-    const url = `${MAIN_URL}/search/movie?api_key=${API_KEY}&query=${query}&language=en-US&page=${page}`;
-    try { // Implement error handling with try-catch
-      const response = await axios.get(url);
-      return response.data;
-    } catch (error) {
-      console.log(error); // Update with appropriate error handling logic
-      throw error; // Rethrow the error or handle it as needed
-    }
-  }
+//   export async function getMovieByKeyword(query, page) {
+//     const url = `${MAIN_URL}/search/movie?api_key=${API_KEY}&query=${query}&language=en-US&page=${page}`;
+//     try { // Implement error handling with try-catch
+//       const response = await axios.get(url);
+//       return response.data;
+//     } catch (error) {
+//       console.log(error); // Update with appropriate error handling logic
+//       throw error; // Rethrow the error or handle it as needed
+//     }
+//   }
 
 //   const searchQuery = refs.searchInput.value.trim();
 //   refs.searchForm.addEventListener('submit', async event => {

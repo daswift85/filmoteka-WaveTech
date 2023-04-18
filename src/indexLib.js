@@ -10,7 +10,7 @@ import './js/render/markup-cards-main-page';
 import './js/refs';
 import './js/components/spinner';
 import './js/team-modal.js';
-import './js/filter/filterByWeeklyTrending';
+// import './js/filter/filterByWeeklyTrending';
 import './js/render/movie-modal';
 import './js/render/open-and-close-modal';
 import './js/loader';

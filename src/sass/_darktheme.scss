@@ -1,5 +1,7 @@
 @import './vars';
-
+.toggle__icon {
+  display: flex;
+}
 body {
   transition: var(--transition-default);
 }

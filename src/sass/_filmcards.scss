@@ -1,5 +1,4 @@
-.gallery,
-.poster-lib {
+.gallery{
   display: grid;
   display: flex;
   flex-wrap: wrap;
@@ -28,8 +27,7 @@
   }
 }
 
-.gallery__item,
-.poster-lib__item {
+.gallery__item {
   width: calc(100% - 1px);
   display: flex;
   flex-direction: column;
@@ -48,21 +46,18 @@
   border-radius: 10px;
   cursor: pointer;
 }
-.gallery__item:hover,
-.poster-lib__item:hover{
+.gallery__item:hover{
   box-shadow: 0px 1px 1px  #b92e2cb0, 0px 4px 4px rgba(0, 0, 0, 0.06),
         1px 4px 6px  #b92e2c97;
   transform: scale(1.03) translateZ(0);
   transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.gallery__wrap,
-.poster-lib__wrap {
+.gallery__wrap{
   padding: 10px 10px 0px 3px;
 }
 
-.gallery__img,
-.poster-lib__img {
+.gallery__img {
   border-radius: inherit;
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
@@ -73,8 +68,7 @@
   flex:1;
 }
 
-.gallery__title,
-.poster-lib__title {
+.gallery__title{
   font-family: 'Roboto';
   font-weight: 800;
   font-size: 12px;
@@ -94,8 +88,7 @@
   color: #000000;
 }
 
-.gallery__genre-text,
-.poster-lib__text{
+.gallery__genre-text{
   font-family: 'Roboto';
   font-style: normal;
   font-weight: 500;
@@ -106,8 +99,7 @@
   margin-left: 5px;
 }
 .gallery__date,
-.gallery__rank,
-.poster-lib__age{
+.gallery__rank{
   position: relative;
   display: inline-block;
   font-family: 'Roboto';
@@ -119,8 +111,7 @@
   margin-bottom: 0;
 }
 
-.gallery__rank,
-.poster-lib__rate{
+.gallery__rank{
   border-radius: 20px;
   color: #ffffff;
   background-color: #b92e2cc1;
@@ -130,4 +121,8 @@
   position: absolute;
   top: 15px;
   right: 15px;
+}
+
+.nothing-img {
+  margin-left: 400px;
 }

@@ -47,7 +47,7 @@ async function loadMoviesByTrend(page) {
     refs.gallery.innerHTML = '';
   
     // Call getTopRatedMovie() function with the current page
-    const data = await getMovieByTrend(type = 'day', page);
+    const data = await getMovieByTrend('day', page);
   
     // Render the movies on the page using createGalleryMarkup() function
     refs.gallery.insertAdjacentHTML(

@@ -1,5 +1,5 @@
 const refs = {
-  heder: document.querySelector('.header'),
+  heder: document.querySelector('.header__container'),
   footer: document.querySelector('.footer'),
   scrollTop: document.querySelector('#scrollTop'),
   scrollDown: document.querySelector('#scrollDown'),

@@ -337,16 +337,16 @@ body.dark-mode .pagination-button:hover {
     fill: var(--black-color);
   }
   body .pagination-button {
-    color: var(--black-color);
-  }
-  body.dark-mode .pagination-button {
     color: var(--white-color);
+  }
+  body.light-mode .pagination-button {
+    color: var(--black-color);
   }
   body .pagination-button:hover {
     color: #fff;
     background-color: #b92f2c;
   }
-  body.dark-mode .pagination-button:hover {
+  body.light-mode .pagination-button:hover {
     color: #fff;
     background-color: #b92f2c;
   }

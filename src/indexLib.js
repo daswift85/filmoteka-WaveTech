@@ -14,7 +14,7 @@ import './js/team-modal.js';
 import './js/render/movie-modal';
 import './js/render/open-and-close-modal';
 import './js/loader';
-import './js/components/pagination2.js';
+// import './js/components/pagination2.js';
 // import './js/filter/filterByTopRated';
 // import './js/filter/filterByNowPlaying';
 // import './js/filter/filterByPopular';

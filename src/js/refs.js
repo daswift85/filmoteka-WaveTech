@@ -26,9 +26,15 @@ const refs = {
   divBackdrop: document.querySelector('.js-backdrop'),
   modalRef: document.querySelector('.modal__wrap'),
   teamRef: document.querySelector('.team__wrap'),
+
+  // ссылка на My library, когда мы находимся в main
+  myLibraryMainPageSwitchBtn: document.querySelector(
+    '#myLibraryMainPageSwitchBtn'
+  ),
+
+  // ссылки, когда находишься в My library
+  myLibrarySwitchBtn: document.querySelector('#myLibrarySwitchBtn'),
+  myLibraryHomeSwitchBtn: document.querySelector('#myLibraryHomeSwitchBtn'),
 };
 
 export default refs;
-
-
-console.log(refs.library);

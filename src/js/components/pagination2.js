@@ -11,7 +11,7 @@ import Notiflix from 'notiflix';
 function initPagination(totalPages, currentPage, onPageChange) {
     // Create a new instance of the Pagination module
     const pagination = new Pagination(refs.pagination, {
-      totalItems: 10000, // Assuming 10 items per page
+      totalItems: 1000, // Assuming 10 items per page
       itemsPerPage: 20, // Number of items per page
       visiblePages: 5, // Number of visible page numbers
       page: currentPage, // Current page number

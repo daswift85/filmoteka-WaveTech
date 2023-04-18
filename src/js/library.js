@@ -12,10 +12,6 @@ console.log(WatcedBtn);
 
 const aLibraryHeader = document.querySelector('#myLibrarySwitchBtn');
 
-
-
-
-
 watchedArray();
 
 if (WatcedBtn) {
@@ -31,13 +27,7 @@ function showWatched() {
     WatcedBtn.classList.add('js-active');
     QueueBtn.classList.remove('js-active');
   } else { WatcedBtn.classList.remove('js-active') }
-  // if (!watched.length) {
-  //   refs.library.innerHTML = `
-  //     <li class="nothing">
-  //       <img class="nothing-img" src="${noPoster}" alt="no nothing" />
-  //     </li>`;
-  //   return;
-  // }
+
   watchedArray();
 }
 
@@ -49,13 +39,7 @@ function showQueue() {
     WatcedBtn.classList.remove('js-active');
     WatcedBtn.classList.remove('library__current-link');
   } else { WatcedBtn.classList.remove('js-active') }
-  // if (!watched.length) {
-  //   refs.library.innerHTML = `
-  //     <li class="nothing">
-  //       <img class="nothing-img" src="${noPoster}" alt="no nothing" />
-  //     </li>`;
-  //   return;
-  // }
+
   queueArray();
 }
 
@@ -74,7 +58,7 @@ export async function takeFromLocal(key) {
         });
     }
   }
-  //   console.log(movies);
+
   return movies;
 }
 
@@ -100,8 +84,8 @@ function watchedArray() {
   }
 }
 
-function watchedArray() {
-  takeFromLocal('watched')
+function queueArray() {
+  takeFromLocal('queue')
     .then(data => {
       if (data.length === 0) { // Check if data is empty
         refs.library.innerHTML = `

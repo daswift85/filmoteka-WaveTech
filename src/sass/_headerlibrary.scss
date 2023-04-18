@@ -97,6 +97,11 @@
   color: var(--white-color);
 }
 
+button.js-active {
+  background-color: var(--accent-color);
+  color: var(--white-color);
+}
+
 // =================LOGO=================
 
 .library_logo-link {

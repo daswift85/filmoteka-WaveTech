@@ -21,7 +21,7 @@ console.log(movieId);
 function onCloseModal(){
     document.body.classList.remove('show-modal');
     refs.modalRef.innerHTML = "";
-    refs.teamRef.innerHTML = "";
+    // refs.teamRef.innerHTML = "";
 }
 
 function onBackDropClick(event) {
@@ -37,5 +37,3 @@ function onEscKeyPress(event){
     window.removeEventListener('keydown', onEscKeyPress);
     onCloseModal();
 }
-
-

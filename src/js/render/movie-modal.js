@@ -90,13 +90,16 @@ function refresh(data, id, keyTrailer = '') {
       watched.splice(watched.indexOf(id), 1);
       setWatchedLocalStoradge(watched);
       addWatchedRef.style.backgroundColor = '#ffffff';
-      getArrayOfMovies(watched)
-        .then(data => {
-          if (refs.library) {
-            refs.library.innerHTML = createGalleryMarkup(data);
-          }
-        })
-        .catch(error => console.log(error));
+        getArrayOfMovies(watched)
+          .then(data => {
+            if (refs.library) {
+              refs.library.insertAdjacentHTML(
+                'beforeend',
+                createGalleryMarkup(data)
+              );
+            }
+          })
+          .catch(error => console.log(error));
     } else {
       onAddToWatched(id);
       setWatchedLocalStoradge(watched);
@@ -179,7 +182,7 @@ function createFilmCardMarkup(data) {
 </div>`;
 
   refs.modalRef.innerHTML = markup;
-  refs.teamRef.innerHTML = '';
+  // refs.teamRef.innerHTML = '';
   const voteRef = document.querySelector('.modal__list-vote');
 
   if (data.vote_average < 6) {

@@ -1,3 +1,4 @@
+import './js/library';
 import './js/genresList';
 import './js/genresListFormat';
 import './js/darktheme.js';
@@ -9,7 +10,6 @@ import './js/render/markup-cards-main-page';
 import './js/refs';
 import './js/components/spinner';
 import './js/team-modal.js';
-import './js/library';
 import './js/searchByKeyword';
 import './js/filter/filterByWeeklyTrending';
 import './js/render/movie-modal';
